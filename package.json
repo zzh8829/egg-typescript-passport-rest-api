@@ -1,0 +1,76 @@
+{
+  "name": "egg",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "egg": {
+    "typescript": true,
+    "declarations": true
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-egg",
+    "stop": "egg-scripts stop --title=egg-server-egg",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "test-local": "egg-bin test",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "cov": "egg-bin cov",
+    "tsc": "ets && tsc -p tsconfig.json",
+    "ci": "npm run lint && npm run cov && npm run tsc",
+    "autod": "autod",
+    "lint": "prettier --write \"**/*.{ts,js}\" && tslint --project . -c tslint.json",
+    "clean": "ets clean",
+    "sequelize": "sequelize"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.7",
+    "egg": "^2.6.1",
+    "egg-cors": "^2.2.3",
+    "egg-passport": "^2.1.0",
+    "egg-passport-github": "^1.0.0",
+    "egg-passport-local": "^1.2.1",
+    "egg-router-plus": "^1.3.1",
+    "egg-scripts": "^2.6.0",
+    "egg-sequelize": "^5.2.1",
+    "egg-validate": "^2.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "passport-jwt": "^4.0.0",
+    "pg": "^7.17.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/jsonwebtoken": "^8.3.5",
+    "@types/mocha": "^2.2.40",
+    "@types/node": "^7.0.12",
+    "@types/supertest": "^2.0.0",
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "dotenv": "^8.2.0",
+    "egg-bin": "^4.11.0",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.16.0",
+    "egg-ts-helper": "^1.25.6",
+    "sequelize-cli": "^5.5.1",
+    "tslib": "^1.9.0",
+    "tslint": "^5.0.0",
+    "tslint-config-egg": "^1.0.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.0.0",
+    "typewiz-core": "^1.2.4"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "ci": {
+    "version": "8"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "eslintIgnore": [
+    "coverage"
+  ],
+  "author": "ZZ",
+  "license": "MIT"
+}
