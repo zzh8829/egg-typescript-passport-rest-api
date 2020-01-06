@@ -1,5 +1,12 @@
 # EGG Typescript Passport Rest API
 
+## Overview
+
+- eggjs and typescript
+- login with username/password + github 
+- api protected by JWT
+- postgres db
+
 ## QuickStart
 
 ### Development
